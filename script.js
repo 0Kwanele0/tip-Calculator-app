@@ -5,19 +5,18 @@ const submit = document.getElementById("resert_btn")
 const custom = document.getElementById("percent_custom")
 const tip = document.getElementById("tip_amount")
 const total = document.getElementById("total_amount")
-let current = document.getElementsByClassName("active")
+let current = document.querySelector(".active")
 
 smallBtns.forEach((el, key) => {
     el.addEventListener('click', () => {
         current[0].className = current[0].className.replace("active", " ")
-        el.className += " active"
+        el.classList.add("active")
         custom.classList.remove("touch")
     })
 })
 
 custom.addEventListener("click", ()=> {
-    custom.classList.add("touch")
-    
+    custom.classList.add("touch")  
 })
 
 submit.addEventListener('click', () => {
@@ -29,7 +28,7 @@ submit.addEventListener('click', () => {
             const active = document.getElementsByClassName("active")
             let answer = null
             
-            if (custom.value > 1) {
+            if (custom.value > 0) {
                 answer =  (parseFloat(bill.value) * parseFloat(custom.value))
             } else {
                 answer = (parseFloat(bill.value) * parseFloat(active[0].innerText))
