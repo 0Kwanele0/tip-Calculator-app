@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Tip calculator app</title>
+</head>
+
+<body>
+  <section class="main">
+    <img src="./images/logo.svg" alt="mylogo">
+    <div class="content">
+      <div class="content__calculator">
+        <div class="content__bill">
+          <p>Bill</p>
+          <i>
+            <img src="./images/icon-dollar.svg" alt="">
+          </i>
+          <input id="bill" min="0" placeholder="0" type="number">
+          <p class="warning">please enter the bill amount</p>
+        </div>
+        <div class="content__percentage">
+          <p>Select Tip</p>
+          <div class="btns">
+            <button value="5" class="percent_btn">5%</button>
+            <button value="10" class="percent_btn active">10%</button>
+            <button value="15" class="percent_btn">15%</button>
+            <button value="25" class="percent_btn">25%</button>
+            <button value="50" class="percent_btn">50%</button>
+            <input id="percent_custom" min="0" placeholder="Custom" type="number"/>
+          </div>
+        </div>
+        <div class="content__people">
+          <p>Number of People</p>
+          <i>
+            <img src="./images/icon-person.svg" alt="">
+          </i>
+          <input id="people" min="0" placeholder="0" type="number"/>
+          <p class="warning2">please enter the number of people</p>
+        </div>
+      </div>
+      <div class="content__results">
+        <div>
+          <div class="content__amount">
+            <div class="text">
+              <h5>Tip Amount</h5>
+              <p>/ person</p>
+            </div>
+            <h3 id="tip_amount">0</h3>
+          </div>
+          <div class="content__total">
+            <div class="text">
+              <h5>Total</h5>
+              <p>/ person</p>
+            </div>
+            <h3 id="total_amount">0</h3>
+          </div>
+        </div>
+        <button id="resert_btn">RESERT</button>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
