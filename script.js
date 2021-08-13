@@ -11,11 +11,13 @@ smallBtns.forEach((el, key) => {
     el.addEventListener('click', () => {
         current[0].className = current[0].className.replace("active", " ")
         el.className += " active"
+        custom.classList.remove("touch")
     })
 })
 
 custom.addEventListener("click", ()=> {
     custom.classList.add("touch")
+    
 })
 
 submit.addEventListener('click', () => {
