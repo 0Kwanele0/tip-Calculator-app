@@ -9,13 +9,26 @@ let current = document.getElementsByClassName("active")
 
 smallBtns.forEach((el, key) => {
     el.addEventListener('click', () => {
+
+        if (current.length < 1) {
+            document.getElementById("default").classList.add("active")
+        }
+
+        console.log(current)
         current[0].className = current[0].className.replace("active", " ")
         el.className += " active"
+        custom.classList.remove("touch")
+        custom.value= 0
     })
 })
 
 custom.addEventListener("click", ()=> {
     custom.classList.add("touch")
+    smallBtns.forEach((el, key) => {
+        if (el.classList.length > 1) {
+            el.className = el.className.replace("active", " ")
+        }
+    })
 })
 
 submit.addEventListener('click', () => {
